@@ -19,7 +19,7 @@
 			if (index === navPoints.length - 1) {
 				objectPositionBottom = objectSelect.offset().top + objectSelect.height()
 			}
-			if($(window).scrollTop() + $(window).height() === $(document).height()) {
+			if(parseInt($(window).scrollTop() + $(window).height()) >= parseInt($(document).height()) - 1) {
 				$(navPoints[navPoints.length - 1] + '-nav').addClass("active");
 				$(navPoints[navPoints.length - 2] + '-nav').removeClass("active");
 				return
