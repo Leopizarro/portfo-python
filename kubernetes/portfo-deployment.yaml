@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfo-deployment
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: portfo
+  template:
+    metadata:
+      labels:
+        app: portfo
+    spec:
+      containers:
+        - name: portfo
+          image: lpzrro/python-portfo-demo:latest
